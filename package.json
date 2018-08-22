@@ -2,6 +2,17 @@
   "name": "eclair-frontend",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build-css": "node-sass-chokidar src/style/scss/ -o src/style/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/style/scss/ -o src/style/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "jssv": "json-server --watch sample-data.json --port 3004",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
@@ -17,12 +28,6 @@
     "reactstrap": "^6.4.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@types/react": "^16.4.11",
