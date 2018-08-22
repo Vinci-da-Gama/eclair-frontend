@@ -6319,3 +6319,20 @@ body {
 
 p {
   font-size: 4em; }
+
+.centered-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+.scroll-content {
+  max-width: 350px;
+  max-height: 280px;
+  width: 350px;
+  height: 280px;
+  overflow-y: scroll; }
