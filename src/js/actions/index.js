@@ -5,6 +5,7 @@ import { FETCH_USERS } from '../types';
 const baseUrl = 'http://localhost:3004';
 
 const loadUsers = (users) => {
+    console.log('8 -- users: ', users);
     return {
         type: FETCH_USERS,
         users

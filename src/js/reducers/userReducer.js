@@ -1,12 +1,13 @@
 import { FETCH_USERS } from '../types';
 
-const INIT_USERS = {};
+const INIT_USERS = {
+    users: []
+};
 
 export default (state = INIT_USERS, action) => {
     switch (action.type) {
         case FETCH_USERS:
-            console.log('8 -- ', action.users);
-            return { ...state, ...action.users };
+            return { ...state, users: action.users };
         default:
             return state;
     }

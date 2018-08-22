@@ -1,0 +1,6 @@
+@mixin fontSmooth() {
+	@each $vender in $venderList {
+		#{$vender}font-smoothing: antialiased;
+	}
+	text-rendering: optimizelegibility;
+}

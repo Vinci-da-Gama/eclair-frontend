@@ -7,10 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-}
-
-p {
-    font-size: 4em;
+    @include fontSmooth();
 }
 
 .centered-container {
@@ -30,6 +27,34 @@ p {
     width: 350px;
     height: 280px;
     overflow-y: scroll;
+}
+
+.h-77px {
+    height: 77px;
+}
+
+.fz-id {
+    font-size: 2.48em;
+}
+
+.fz-title {
+    font-size: 12px;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-green {
+    background-color: $light-green;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-green {
+    color: $light-green;
 }
 
 @import 'mq';

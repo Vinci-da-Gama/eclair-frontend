@@ -6315,10 +6315,13 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
-
-p {
-  font-size: 4em; }
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizelegibility; }
 
 .centered-container {
   position: fixed;
@@ -6336,3 +6339,24 @@ p {
   width: 350px;
   height: 280px;
   overflow-y: scroll; }
+
+.h-77px {
+  height: 77px; }
+
+.fz-id {
+  font-size: 2.48em; }
+
+.fz-title {
+  font-size: 12px; }
+
+.bg-red {
+  background-color: #cc3366; }
+
+.bg-green {
+  background-color: #33cc99; }
+
+.text-red {
+  color: #cc3366; }
+
+.text-green {
+  color: #33cc99; }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import brandImg from '../../img/brand.png';
 import { getUsers } from '../actions';
+import { itemComponent } from '../components/list-item';
 
 class ListContainer extends Component {
     componentWillMount() {
@@ -10,6 +11,11 @@ class ListContainer extends Component {
     }
 
     render () {
+        if (!this.props.users || this.props.users.length === 0) {
+			return (
+				<div className="centered-container">Loading...</div>
+			);
+		}
         return (
             <div>
                 <div className="card bg-light centered-container">
@@ -18,29 +24,14 @@ class ListContainer extends Component {
                         <p className="my-2 text-uppercase">USER ID: 1</p>
                     </div>
                     <div className="card-body scroll-content">
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
-                        <p>a...</p>
+                        {this.props.users.map(itemComponent)}
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
-const mapStateToProps = (users) => ({users});
+const mapStateToProps = (state) => ({users: state.users.users});
 
 export default connect(mapStateToProps, { getUsers })(ListContainer);
