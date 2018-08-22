@@ -12,7 +12,30 @@ class ListContainer extends Component {
     render () {
         return (
             <div>
-                List...
+                <div className="card bg-light centered-container">
+                    <div className="card-header text-center">
+                        <img src={brandImg} className="img-fluid" alt="brand" />
+                        <p className="my-2 text-uppercase">USER ID: 1</p>
+                    </div>
+                    <div className="card-body scroll-content">
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                        <p>a...</p>
+                    </div>
+                </div>
             </div>
         )
     }
