@@ -6360,3 +6360,7 @@ body {
 
 .text-green {
   color: #33cc99; }
+
+@media all and (max-width: 357px) {
+  .scroll-content {
+    width: auto; } }
