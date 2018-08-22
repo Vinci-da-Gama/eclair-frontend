@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-// import logo from './img/logo.svg';
-import ListContainer from './js/containers';
+import ListContainer from '../containers';
 
 class App extends Component {
 	render() {
